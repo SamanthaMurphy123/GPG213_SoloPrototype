@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public abstract class Character : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public abstract class Character : MonoBehaviour
     public void Die ()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("DieScene");
     }
 
     public void SetTarget (Character t)
